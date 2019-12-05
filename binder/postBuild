@@ -39,7 +39,7 @@ pip install --no-cache-dir scipy
 
 pip install --no-cache-dir -r binder/requirements.txt
 
-jupyter nbextension install accessibility_toolbar 
+jupyter nbextension install accessibility_toolbar --sys-prefix
 
 jupyter contrib nbextension install --sys-prefix
 
