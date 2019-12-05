@@ -7,3 +7,4 @@ dependencies:
   - mongodb
   - psycopg2
   - graphviz
+  - openrefine
