@@ -35,6 +35,7 @@ jupyter labextension install jupyterlab-server-proxy
 
 #Some pre-requirements
 pip install --no-cache-dir numpy
+pip install --no-cache-dir scipy
 
 pip install --no-cache-dir -r binder/requirements.txt
 
