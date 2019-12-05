@@ -1,4 +1,4 @@
-name: postgres-example
+name: tm351vm-example
 channels:
   - defaults
 dependencies:
@@ -7,4 +7,4 @@ dependencies:
   - mongodb
   - psycopg2
   - graphviz
-  - openrefine
+  - openjdk
