@@ -31,7 +31,7 @@ et-xmlfile==1.0.1
 fastkml==0.11
 filemagic==1.6
 Fiona==1.7.12
-folium==0.10.0
+folium#==0.10.0
 future==0.16.0
 geographiclib==1.49
 geopandas==0.3.0
@@ -86,9 +86,9 @@ nbformat==4.4.0
 nbgrader==0.5.4
 nbval==0.9.1
 networkx==2.1
-nltk==3.3
+nltk#==3.3
 normality==0.6.1
-notebook==5.5.0
+notebook#==5.5.0
 numexpr==2.6.5
 numpy==1.14.5
 odszip==0.0.1
@@ -145,7 +145,7 @@ simplegeneric==0.8.1
 six==1.11.0
 smmap2==2.0.3
 SPARQLWrapper==1.8.2
-SQLAlchemy==1.2.9
+SQLAlchemy#==1.2.9
 sqlalchemy-schemadisplay==1.4.dev0
 sqlparse==0.2.4
 ssh-import-id==5.5
