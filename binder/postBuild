@@ -33,8 +33,10 @@ mv open-refine-logo.svg $HOME/.jupyter/
 jupyter labextension install jupyterlab-server-proxy
 
 
+#Some pre-requirements
+pip install --no-cache numpy
 
-pip install -r binder/requirements.txt
+pip install --no-cache -r binder/requirements.txt
 
 jupyter nbextension install accessibility_toolbar 
 
