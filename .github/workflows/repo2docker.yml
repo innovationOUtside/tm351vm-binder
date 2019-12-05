@@ -1,5 +1,6 @@
 name: Build Notebook Container
-on: [push]
+on: release:
+  types: [published]
 jobs:
   build:
     runs-on: ubuntu-18.04
@@ -13,4 +14,4 @@ jobs:
       with:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-        IMAGE_NAME: "ousefuldemos/tm351-binderised"
+        IMAGE_NAME: "ousefuldemos/tm351-binderised:latest"
