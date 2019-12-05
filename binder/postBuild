@@ -1,0 +1,16 @@
+#!/bin/bash
+set -eux
+PGDATA=${PGDATA:-/home/jovyan/srv/pgsql}
+if [ ! -d "$PGDATA" ]; then
+  initdb -D "$PGDATA" --auth-host=md5 --encoding=UTF8
+fi
+
+pg_ctl -D "$PGDATA" -l "$PGDATA/pg.log" start
+
+chmod +x $HOME/init_db.sh
+$HOME/init_db.sh
+#Put an equivalent of the above in a config file: init_db.sql
+#psql -U postgres postgres -f init_db.sql
+#psql test < seed_db.sql
+
+pip install -r binder/requirements.txt
