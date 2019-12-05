@@ -13,4 +13,4 @@ $HOME/init_db.sh
 #psql -U postgres postgres -f init_db.sql
 #psql test < seed_db.sql
 
-pip install -r binder/requirements.txt
+#pip install -r binder/requirements.txt
