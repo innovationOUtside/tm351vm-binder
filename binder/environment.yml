@@ -5,7 +5,6 @@ channels:
 dependencies:
   - pip
   - postgresql
-  - mongodb
   - psycopg2
   - graphviz
   - openjdk
