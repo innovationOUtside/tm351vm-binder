@@ -13,4 +13,44 @@ $HOME/init_db.sh
 #psql -U postgres postgres -f init_db.sql
 #psql test < seed_db.sql
 
-#pip install -r binder/requirements.txt
+pip install -r binder/requirements.txt
+
+jupyter nbextension install accessibility_toolbar 
+
+jupyter contrib nbextension install --sys-prefix
+
+#Enable certain extensions from the start
+jupyter nbextension enable freeze/main --sys-prefix
+jupyter nbextension enable highlighter/highlighter --sys-prefix
+jupyter nbextension enable spellchecker/main --sys-prefix
+jupyter nbextension enable collapsible_headings/main --sys-prefix
+jupyter nbextension enable codefolding/main --sys-prefix
+jupyter nbextension enable rubberband/main --sys-prefix
+jupyter nbextension enable exercise2/main --sys-prefix
+jupyter nbextension enable python-markdown/main --sys-prefix
+jupyter nbextension enable export_embedded/main --sys-prefix
+
+jupyter nbextension enable skip-traceback/main --sys-prefix
+jupyter nbextension enable hide_input/main --sys-prefix
+jupyter nbextension enable init_cell/main --sys-prefix
+
+#Accessibility
+jupyter nbextension install accessibility_toolbar --sys-prefix
+jupyter nbextension enable accessibility_toolbar/main
+
+#Slideshow
+jupyter nbextension install rise  --py --sys-prefix
+jupyter nbextension enable rise  --py --sys-prefix
+
+#WYSIWYG editor
+jupyter nbextension install jupyter_wysiwyg  --py --sys-prefix
+jupyter nbextension enable jupyter_wysiwyg --py --sys-prefix
+
+
+# Resource monitoring
+jupyter serverextension enable --py nbresuse --sys-prefix
+jupyter nbextension install --py nbresuse --sys-prefix
+jupyter nbextension enable --py nbresuse --sys-prefix
+
+jupyter bundlerextension enable --py wordexport.wordexport --sys-prefix
+jupyter bundlerextension enable --py odszip.download --sys-prefix
