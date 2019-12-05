@@ -13,6 +13,27 @@ $HOME/init_db.sh
 #psql -U postgres postgres -f init_db.sql
 #psql test < seed_db.sql
 
+
+#OpenRefine
+wget -q -O openrefine-2.8.tar.gz https://github.com/OpenRefine/OpenRefine/releases/download/2.8/openrefine-linux-2.8.tar.gz
+mkdir -p $HOME/.openrefine
+tar xzf openrefine-2.8.tar.gz -C $HOME/.openrefine
+rm openrefine-2.8.tar.gz
+
+mkdir -p $HOME/openrefine
+
+mkdir -p $HOME/.jupyter/
+
+#Although located in binder/,
+# this bash file runs in $HOME rather than $HOME/binder
+mv jupyter_notebook_config.py $HOME/.jupyter/
+mv open-refine-logo.svg $HOME/.jupyter/
+
+#Enable the OpenRefine icon in JuptyerLab desktop launcher
+jupyter labextension install jupyterlab-server-proxy
+
+
+
 pip install -r binder/requirements.txt
 
 jupyter nbextension install accessibility_toolbar 
