@@ -137,8 +137,8 @@ rdflib==4.2.2
 requests #==2.19.1
 rise #==5.3.0
 git+https://github.com/fschulze/sqlalchemy_schemadisplay.git ##schemadisplay-magic==0.0.0
-scipy==1.1.0 #dependency of scikit-learn
 scikit-learn==0.19.1
+#scipy==1.1.0 #dependency of scikit-learn
 seaborn==0.8.1
 Send2Trash==1.5.0
 Shapely ##==1.6.4.post1
