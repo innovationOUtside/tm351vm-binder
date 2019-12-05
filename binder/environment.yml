@@ -4,6 +4,7 @@ channels:
 dependencies:
   - pip
   - postgresql
+  - mongodb
   - psycopg2
   - pip:
     - pandas
