@@ -1,5 +1,7 @@
 #!/bin/bash
 set -eux
+
+#Set up postgres
 PGDATA=${PGDATA:-/home/jovyan/srv/pgsql}
 if [ ! -d "$PGDATA" ]; then
   initdb -D "$PGDATA" --auth-host=md5 --encoding=UTF8
@@ -13,8 +15,22 @@ $HOME/init_db.sh
 #psql -U postgres postgres -f init_db.sql
 #psql test < seed_db.sql
 
+#Set up mongodb
+MONGODB_VERSION=3.6.15
+MONGODB_PATH=mongodb-$MONGODB_VERSION
+MONGODB_BASE=mongodb-linux-x86_64
 
-#OpenRefine
+#https://fastdl.mongodb.org/linux/${MONGODB_BASE}-3.6.15.tgz
+wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-${MONGODB_VERSION}.tgz
+
+tar -xvf ${MONGODB_BASE}-${MONGODB_VERSION}.tgz >/dev/null 
+rm ${MONGODB_BASE}-${MONGODB_VERSION}.tgz
+mv ${MONGODB_BASE}-${MONGODB_VERSION} ${MONGODB_PATH}
+
+mkdir ${MONGODB_PATH}/data/db -p
+
+
+#Set up OpenRefine
 wget -q -O openrefine-2.8.tar.gz https://github.com/OpenRefine/OpenRefine/releases/download/2.8/openrefine-linux-2.8.tar.gz
 mkdir -p $HOME/.openrefine
 tar xzf openrefine-2.8.tar.gz -C $HOME/.openrefine
@@ -33,13 +49,17 @@ mv open-refine-logo.svg $HOME/.jupyter/
 jupyter labextension install jupyterlab-server-proxy
 
 
-#Some pre-requirements
+#Some Python package pre-requirements
 pip install --no-cache-dir numpy
 pip install --no-cache-dir scipy
 
+#Pyhton requirements
 pip install --no-cache-dir -r binder/requirements.txt
 
+#Other requirements
 git clone https://github.com/uclixnjupyternbaccessibility/accessibility_toolbar.git
+
+#Install and enable extensions
 jupyter nbextension install accessibility_toolbar --sys-prefix
 
 jupyter contrib nbextension install --sys-prefix
