@@ -1,6 +1,7 @@
 name: Build Notebook Container
-on: release:
-  types: [published]
+on:
+  release:
+    types: [published]
 jobs:
   build:
     runs-on: ubuntu-18.04
