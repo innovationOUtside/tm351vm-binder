@@ -90,7 +90,7 @@ networkx==2.1
 nltk #==3.3
 normality==0.6.1
 ##notebook==5.5.0
-numexpr==2.6.5
+numexpr #==2.6.5
 numpy==1.14.5
 git+https://github.com/innovationOUtside/nb_extension_odszip.git ##odszip==0.0.1
 openpyxl==2.5.4
