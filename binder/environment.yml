@@ -1,6 +1,7 @@
 name: tm351vm-example
 channels:
   - defaults
+  - conda-forge
 dependencies:
   - pip
   - postgresql
@@ -8,3 +9,4 @@ dependencies:
   - psycopg2
   - graphviz
   - openjdk
+  - pyproj
