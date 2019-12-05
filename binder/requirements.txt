@@ -60,7 +60,7 @@ jsonschema==2.6.0
 #jupyter-console==5.2.0
 #jupyter-contrib-core==0.3.3
 jupyter-contrib-nbextensions #==0.5.0
-jupyter-core==4.4.0
+#jupyter-core==4.4.0
 jupyter-highlight-selected-word==0.2.0
 jupyter-latex-envs==1.4.4
 jupyter-nbextensions-configurator #==0.4.0
@@ -85,7 +85,7 @@ nbconvert #==5.3.1
 nbdime #==1.0.1
 nbformat #==4.4.0
 nbgrader #==0.5.4
-nbval==0.9.1
+nbval #==0.9.1
 networkx==2.1
 nltk #==3.3
 normality==0.6.1
