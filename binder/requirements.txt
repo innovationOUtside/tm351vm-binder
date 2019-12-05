@@ -85,6 +85,7 @@ nbconvert #==5.3.1
 nbdime #==1.0.1
 nbformat #==4.4.0
 nbgrader #==0.5.4
+nbresuse
 nbval #==0.9.1
 networkx==2.1
 nltk #==3.3
