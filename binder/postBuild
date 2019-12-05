@@ -2,7 +2,7 @@
 set -eux
 
 #Set up postgres
-PGDATA=${PGDATA:-/home/jovyan/srv/pgsql}
+PGDATA=${PGDATA:-${HOME}/srv/pgsql}
 if [ ! -d "$PGDATA" ]; then
   initdb -D "$PGDATA" --auth-host=md5 --encoding=UTF8
 fi
