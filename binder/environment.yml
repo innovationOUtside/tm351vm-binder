@@ -2,6 +2,7 @@ name: postgres-example
 channels:
   - defaults
 dependencies:
+  - pip
   - postgresql
   - psycopg2
   - pip:
