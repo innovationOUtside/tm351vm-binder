@@ -6,6 +6,4 @@ dependencies:
   - postgresql
   - mongodb
   - psycopg2
-  - pip:
-    - pandas
-    - git+https://github.com/catherinedevlin/ipython-sql.git
+  - graphviz
