@@ -30,8 +30,8 @@ entrypoints==0.2.3
 et-xmlfile==1.0.1
 fastkml==0.11
 filemagic==1.6
-Fiona==1.7.12
-folium#==0.10.0
+Fiona #==1.7.12
+folium #==0.10.0
 future==0.16.0
 geographiclib==1.49
 geopandas==0.3.0
@@ -52,18 +52,18 @@ isodate==0.6.0
 itables==0.2.1
 jdcal==1.4
 jedi==0.12.1
-Jinja2#==2.10
+Jinja2 #==2.10
 json-table-schema==0.2.1
 jsonschema==2.6.0
 #jupyter==1.0.0
 #jupyter-client==5.2.3
 #jupyter-console==5.2.0
 #jupyter-contrib-core==0.3.3
-jupyter-contrib-nbextensions#==0.5.0
+jupyter-contrib-nbextensions #==0.5.0
 jupyter-core==4.4.0
 jupyter-highlight-selected-word==0.2.0
 jupyter-latex-envs==1.4.4
-jupyter-nbextensions-configurator#==0.4.0
+jupyter-nbextensions-configurator #==0.4.0
 jupyter-wysiwyg==0.1.8
 #jupyterlab==0.32.1
 #jupyterlab-launcher==0.10.5
@@ -86,14 +86,14 @@ nbformat==4.4.0
 nbgrader==0.5.4
 nbval==0.9.1
 networkx==2.1
-nltk#==3.3
+nltk #==3.3
 normality==0.6.1
-notebook#==5.5.0
+##notebook==5.5.0
 numexpr==2.6.5
 numpy==1.14.5
-odszip==0.0.1
+git+https://github.com/innovationOUtside/nb_extension_odszip.git ##odszip==0.0.1
 openpyxl==2.5.4
-pandas==0.23.1
+pandas #==0.23.1
 pandasql==0.7.3
 pandocfilters==1.4.2
 parsedatetime==2.4
@@ -113,57 +113,57 @@ pydot3==1.0.9
 pygeoif==0.7
 PyGithub==1.40
 Pygments==2.2.0
-pygobject==3.20.0
+#pygobject==3.20.0
 PyJWT==1.6.4
 pymongo==3.7.0
 pyparsing==2.2.0
 PyPDF2==1.26.0
 pyproj==1.9.5.1
 pytest==3.6.3
-python-apt==1.1.0b1+ubuntu0.16.4.1
+#python-apt==1.1.0b1+ubuntu0.16.4.1
 python-dateutil==2.7.3
-python-debian==0.1.27
+#python-debian==0.1.27
 python-editor==1.0.3
 python-magic==0.4.15
 python-slugify==1.2.5
-python-systemd==231
+#python-systemd==231
 pytimeparse==1.1.8
 pytz==2018.5
-PyYAML#==3.13
+PyYAML #==3.13
 pyzmq==17.0.0
 qtconsole==4.3.1
 rdflib==4.2.2
-requests#==2.19.1
-rise#==5.3.0
-schemadisplay-magic==0.0.0
+requests #==2.19.1
+rise #==5.3.0
+git+https://github.com/fschulze/sqlalchemy_schemadisplay.git ##schemadisplay-magic==0.0.0
 scikit-learn==0.19.1
 scipy==1.1.0
 seaborn==0.8.1
 Send2Trash==1.5.0
-Shapely==1.6.4.post1
+Shapely ##==1.6.4.post1
 simplegeneric==0.8.1
 six==1.11.0
 smmap2==2.0.3
 SPARQLWrapper==1.8.2
-SQLAlchemy#==1.2.9
-sqlalchemy-schemadisplay==1.4.dev0
+SQLAlchemy #==1.2.9
+git+https://github.com/innovationOUtside/ipython_magic_sqlalchemy_schemadisplay.git ##sqlalchemy-schemadisplay==1.4.dev0
 sqlparse==0.2.4
 ssh-import-id==5.5
 statsmodels==0.9.0
-tables==3.4.4
+tables #==3.4.4
 tabulate==0.8.2
 terminado==0.8.1
 testpath==0.3.1
-##tm351-nb-utils==0.0.2
-##tm351-utils==0.0.3
+git+https://github.com/innovationOUtside/nb_workflow_tools.git ##tm351-nb-utils==0.0.2
+git+https://github.com/innovationOUtside/tm351_utils.git ##tm351-utils==0.0.3
 tornado==5.0.2
 tqdm==4.23.4
-traitlets==4.3.2
-ufw==0.35
+traitlets #==4.3.2
+#ufw==0.35
 Unidecode==1.0.22
-urllib3#==1.23
+urllib3 #==1.23
 wcwidth==0.1.7
 webencodings==0.5.1
-widgetsnbextension==3.2.1
-##wordexport==0.0.1
+##widgetsnbextension==3.2.1
+git+https://github.com/innovationOUtside/nb_extension_wordexport.git ##wordexport==0.0.1
 xlrd==1.1.0
