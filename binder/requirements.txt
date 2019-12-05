@@ -88,7 +88,7 @@ nbval==0.9.1
 networkx==2.1
 nltk==3.3
 normality==0.6.1
-notebook==5.5.0
+notebook==5.7.8
 numexpr==2.6.5
 numpy==1.14.5
 odszip==0.0.1
