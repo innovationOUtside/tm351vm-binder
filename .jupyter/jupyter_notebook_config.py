@@ -3,7 +3,7 @@ from os import environ
 
 c.ServerProxy.servers = {
     'openrefine': {
-        'command': [f'{environ["CONDA_DIR"]}/openrefine/openrefine-2.8/refine', '-p', '{port}','-d','/home/jovyan/openrefine'],
+        'command': [f'{environ["CONDA_DIR"]}/openrefine/openrefine-2.8/refine', '-p', '{port}','-d','f'{environ["HOME"]}/openrefine'],
         'port': 3333,
         'timeout': 120,
         'launcher_entry': {
