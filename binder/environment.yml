@@ -4,6 +4,7 @@ channels:
   - conda-forge
 dependencies:
   - pip
+  - nano
   - postgresql
   - psycopg2
   - graphviz
