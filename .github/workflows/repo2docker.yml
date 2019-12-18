@@ -1,4 +1,3 @@
-#https://github.com/machine-learning-apps/repo2docker-action
 name: Build Notebook Container
 on:
   release:
