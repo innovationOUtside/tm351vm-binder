@@ -33,8 +33,8 @@ mkdir ${MONGODB_PATH}/data/db -p
 
 #Set up OpenRefine
 wget -q -O openrefine-2.8.tar.gz https://github.com/OpenRefine/OpenRefine/releases/download/2.8/openrefine-linux-2.8.tar.gz
-mkdir -p $CONDA_DIR/.openrefine
-tar xzf openrefine-2.8.tar.gz -C $CONDA_DIR/.openrefine
+mkdir -p $CONDA_DIR/openrefine
+tar xzf openrefine-2.8.tar.gz -C $CONDA_DIR/openrefine
 rm openrefine-2.8.tar.gz
 
 #Enable the server-proxy extension installed via conda;
