@@ -38,6 +38,14 @@ mv ${MONGODB_BASE}-${MONGODB_VERSION} ${MONGODB_PATH}
 
 mkdir ${MONGODB_PATH}/data/db -p
 
+#Seed mongodb
+${MONGODB_PATH}/bin/mongod --dbpath ${MONGODB_PATH}/data/db &
+
+mkdir -p ./tmpdatafiles
+tar xvjf ./data/small_accidents.tar.bz2 -C ./tmpdatafiles
+${MONGODB_PATH}/bin/mongorestore --drop --db accidents ./tmpdatafiles/small_accidents
+rm -r ./data
+rm -r ./tmpdatafiles
 
 #Set up OpenRefine
 echo "Set up OpenRefine..."
