@@ -1,12 +1,16 @@
 #!/bin/bash
 set -eux
-PGDATA=${PGDATA:-/home/jovyan/srv/pgsql}
+PGDATA=${PGDATA:-${CONDA_DIR}/srv/pgsql}
 pg_ctl -D "$PGDATA" -l "$PGDATA/pg.log" start
 
 export MONGODB_VERSION=3.6.15
-export MONGODB_PATH=${HOME}/mongodb-$MONGODB_VERSION
+export MONGODB_PATH=${CONDA_DIR}/srv/mongodb-$MONGODB_VERSION
 export PATH=${MONGODB_PATH}/bin:$PATH
 
 ${MONGODB_PATH}/bin/mongod --dbpath ${MONGODB_PATH}/data/db &
 
+#Copy over the config files
+cp -R $CONDA_DIR/.jupyter $HOME/
+
+mkdir -p $HOME/openrefine
 exec "$@"

@@ -9,3 +9,4 @@ dependencies:
   - graphviz
   - openjdk
   - pyproj
+  - jupyter-server-proxy
