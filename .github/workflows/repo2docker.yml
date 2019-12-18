@@ -12,7 +12,7 @@ jobs:
       uses: actions/checkout@master
 
     - name: try-local-build
-      uses: machine-learning-apps/repo2docker-action@master
+      uses: ouseful-PR/repo2docker-action@master #forked and tweaked
       with:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
