@@ -37,8 +37,9 @@ mkdir -p $CONDA_DIR/.openrefine
 tar xzf openrefine-2.8.tar.gz -C $CONDA_DIR/.openrefine
 rm openrefine-2.8.tar.gz
 
-#Enable the server-proxy extension installed via conda
-# (this lets us proxy OpenRefine)
+#Enable the server-proxy extension installed via conda;
+# this lets us proxy OpenRefine and will
+# enable the OpenRefine icon in JuptyerLab desktop launcher
 jupyter labextension install jupyterlab-server-proxy
 
 #Although located in binder/,
@@ -96,5 +97,5 @@ jupyter nbextension enable --py nbresuse --sys-prefix
 jupyter bundlerextension enable --py wordexport.wordexport --sys-prefix
 jupyter bundlerextension enable --py odszip.download --sys-prefix
 
-Enable the OpenRefine icon in JuptyerLab desktop launcher
+
 
