@@ -21,6 +21,7 @@ $CONDA_DIR/init_db/postgres/init_db.sh
 #psql -U postgres postgres -f init_db.sql
 #psql test < seed_db.sql
 
+pg_ctl -D "$PGDATA" -l "$PGDATA/pg.log" stop
 
 #Set up mongodb
 echo "Set up mongo...."
@@ -39,11 +40,14 @@ mv ${MONGODB_BASE}-${MONGODB_VERSION} ${MONGODB_PATH}
 mkdir ${MONGODB_PATH}/data/db -p
 
 #Seed mongodb
-${MONGODB_PATH}/bin/mongod --dbpath ${MONGODB_PATH}/data/db &
+#${MONGODB_PATH}/bin/mongod --dbpath ${MONGODB_PATH}/data/db &
+${MONGODB_PATH}/bin/mongod --fork --dbpath ${MONGODB_PATH}/data/db
 
 mkdir -p ./tmpdatafiles
 tar xvjf ./data/small_accidents.tar.bz2 -C ./tmpdatafiles
 ${MONGODB_PATH}/bin/mongorestore --drop --db accidents ./tmpdatafiles/small_accidents
+mongod --shutdown
+
 rm -r ./data
 rm -r ./tmpdatafiles
 
