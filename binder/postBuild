@@ -41,7 +41,7 @@ mkdir ${MONGODB_PATH}/data/db -p
 
 #Seed mongodb
 #${MONGODB_PATH}/bin/mongod --dbpath ${MONGODB_PATH}/data/db &
-${MONGODB_PATH}/bin/mongod --fork --dbpath ${MONGODB_PATH}/data/db
+${MONGODB_PATH}/bin/mongod --fork --logpath /dev/stdout --dbpath ${MONGODB_PATH}/data/db
 
 mkdir -p ./tmpdatafiles
 tar xvjf ./data/small_accidents.tar.bz2 -C ./tmpdatafiles

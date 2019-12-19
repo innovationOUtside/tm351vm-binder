@@ -8,7 +8,7 @@ export MONGODB_PATH=${CONDA_DIR}/srv/mongodb-$MONGODB_VERSION
 export PATH=${MONGODB_PATH}/bin:$PATH
 
 #${MONGODB_PATH}/bin/mongod --dbpath ${MONGODB_PATH}/data/db &
-${MONGODB_PATH}/bin/mongod --fork --dbpath ${MONGODB_PATH}/data/db
+${MONGODB_PATH}/bin/mongod --fork --logpath /dev/stdout --dbpath ${MONGODB_PATH}/data/db
 
 #Copy over the config files
 cp -R $CONDA_DIR/.jupyter $HOME/
