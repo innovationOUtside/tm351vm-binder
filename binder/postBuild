@@ -82,6 +82,8 @@ pip install --no-cache-dir scipy
 pip install --no-cache-dir -r binder/requirements.txt
 
 #Other requirements
+
+#Need to tidy up after installing this?
 git clone https://github.com/uclixnjupyternbaccessibility/accessibility_toolbar.git
 
 #Install and enable extensions

@@ -14,4 +14,5 @@ ${MONGODB_PATH}/bin/mongod --fork --logpath /dev/stdout --dbpath ${MONGODB_PATH}
 cp -R $CONDA_DIR/.jupyter $HOME/
 
 mkdir -p $HOME/openrefine
+
 exec "$@"
