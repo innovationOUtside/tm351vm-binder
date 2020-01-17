@@ -48,4 +48,4 @@ Use the token value to log in to the server.
 
 The run command will create a notebooks directory in the directory you issued the run command from, and then share it into the `notebooks` folder that you can see from the notebook server homepage. OpenRefine projects are also shared between your local machine and the container.
 
-Files that exist outside the `/home/joyan/notebooks` and `/home/jovyan/openrefine` in the container (which is to say, outside the `notebooks` and `openrefine` directories viewable from the notebook server homepage, *will not be shared to your local desktop*.
+Files that exist outside the `/home/joyan/notebooks` and `/home/jovyan/openrefine` directory paths in the container (which is to say, outside the `notebooks` and `openrefine` directories viewable from the notebook server homepage, *will not be shared to your local desktop*.
