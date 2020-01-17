@@ -29,13 +29,17 @@ The Jupyter notebook server runs on the default port 8888.
 
 The container can be launched directly using [`containds`](https://containds.com/), the desktop app for running notebook containers and a personal, local Binder service. Select a new image and search for `tm351`; the `ousefuldemos/tm351-binderised` image is the one you want. When prompted, select the "standard" launch route, NOT the 'Try to start Jupyter notebook' route.
 
-To run the container from the command line:
+To run the container from the command line on a Mac:
 
 `docker run --name tm351test --rm -d -p 8895:8888 -v $PWD/notebooks:/home/jovyan/notebooks -v $PWD/openrefine_projects:/home/jovyan/openrefine ousefuldemos/tm351-binderised:latest`
 
-This will serve the container on `http://localhost:8895`
+This will serve the container on `http://localhost:8895` and share folders from the current directory.
 
-You will need to find the token used to access the notebook server. Run:
+On Windows, I think you need to try something like the following [UNTESTED]:
+
+`docker run --name tm351test --rm -d -p 8895:8888 -v c:\tm129share\notebooks:c:\home\jovyan\notebooks -v c:\tm129share\openrefine_projects:c:\home\jovyan\openrefine ousefuldemos/tm351-binderised:latest`
+
+In order to access the notebook server via your browser, you will need to find the token used to access the notebook server. Run:
 
 `docker exec -it tm351test jupyter notebook list`
 
