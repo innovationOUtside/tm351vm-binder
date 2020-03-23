@@ -1,11 +1,11 @@
 # tm351vm-binder
 See if we can generate a Binder/repo2docker build of the TM351 VM
 
-Open to Notebook homepage: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/innovationOUtside/tm351vm-binder/master)
+Open to Notebook homepage: [![Binder](https://gke.mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/innovationOUtside/tm351vm-binder/master)
 
-Open to OpenRefine: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/innovationOUtside/tm351vm-binder/master?urlpath=openrefine)
+Open to OpenRefine: [![Binder](https://mybinder.org/badge_logo.svg)](https://gke.mybinder.org/v2/gh/innovationOUtside/tm351vm-binder/master?urlpath=openrefine)
 
-Open to Jupyterlab: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/innovationOUtside/tm351vm-binder/master?urlpath=lab)
+Open to Jupyterlab: [![Binder](https://mybinder.org/badge_logo.svg)](https://gke.mybinder.org/v2/gh/innovationOUtside/tm351vm-binder/master?urlpath=lab)
 
 The TM351 Virtual Machine was originally developed as a vagrant launched VirtualBox Lunix virtual machine to support the Open University distance learning course *TM351 Data Management and Analysis*.
 
