@@ -129,5 +129,9 @@ jupyter nbextension enable --py nbresuse --sys-prefix
 jupyter bundlerextension enable --py wordexport.wordexport --sys-prefix
 jupyter bundlerextension enable --py odszip.download --sys-prefix
 
+
+#Set executable permission on start file
+chmod +x binder/start
+
 echo "postBuild done..."
 
