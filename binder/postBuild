@@ -65,11 +65,13 @@ rm openrefine-2.8.tar.gz
 # this bash file runs in $HOME rather than $HOME/binder
 mv .jupyter $CONDA_DIR/
 
-echo "Enable Jupyter server proxy extension..."
+#echo "Enable Jupyter server proxy extension..."
 #Enable the server-proxy extension installed via conda;
 # this lets us proxy OpenRefine and will
 # enable the OpenRefine icon in JuptyerLab desktop launcher
-jupyter labextension install jupyterlab-server-proxy
+# "ValueError: This extension does not yet support the current version of JupyterLab."
+# I have no f****g idea...
+#jupyter labextension install jupyterlab-server-proxy
 
 
 echo "Install Python requirements..."
