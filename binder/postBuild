@@ -33,7 +33,7 @@ MONGODB_BASE=mongodb-linux-x86_64
 #https://fastdl.mongodb.org/linux/${MONGODB_BASE}-3.6.15.tgz
 wget -q https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-${MONGODB_VERSION}.tgz
 
-tar -xvf ${MONGODB_BASE}-${MONGODB_VERSION}.tgz >/dev/null 
+tar -xvf ${MONGODB_BASE}-${MONGODB_VERSION}.tgz >/dev/null
 rm ${MONGODB_BASE}-${MONGODB_VERSION}.tgz
 mv ${MONGODB_BASE}-${MONGODB_VERSION} ${MONGODB_PATH}
 
@@ -112,7 +112,10 @@ jupyter nbextension enable init_cell/main --sys-prefix
 
 #Accessibility
 jupyter nbextension install accessibility_toolbar --sys-prefix
-jupyter nbextension enable accessibility_toolbar/main
+
+# AW: don't enable, but want to keep it installed
+# Can always let students know it's there.
+#jupyter nbextension enable accessibility_toolbar/main
 
 #Slideshow
 jupyter nbextension install rise  --py --sys-prefix
@@ -136,4 +139,3 @@ jupyter bundlerextension enable --py odszip.download --sys-prefix
 chmod +x binder/start
 
 echo "postBuild done..."
-
