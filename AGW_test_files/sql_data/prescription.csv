@@ -1,0 +1,10 @@
+patient_id,date,doctor_id,drug_code,dosage,duration
+p001,2017-05-15,d06,O17663,40 mg 1 x day,Daily
+p001,2017-05-15,d06,T02378,50 mg 3 x day,As required
+p001,2017-05-23,d06,S33558,40 mg 1 x day,Daily
+p001,2017-06-15,d07,A12458,10 mg 5 x day,As required
+p007,2017-06-01,d07,C31319,500 mg 2 x day,20 days
+p007,2017-06-01,d07,T05223,20 mg 1 x day,20 days
+p007,2017-06-19,d07,T05223,40 mg 1 x day,20 days
+p007,2017-07-01,d07,S33558,20 mg 1 x day,6 weeks
+p008,2017-06-01,d07,A12458,10 mg 5 x day,10 days
