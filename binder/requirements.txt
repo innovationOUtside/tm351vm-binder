@@ -64,6 +64,10 @@ jupyter-contrib-nbextensions
 jupyter-highlight-selected-word
 jupyter-latex-envs
 jupyter-nbextensions-configurator
+
+# Dashboard showing requirements - useful for self check of environment?
+jupyter-nbrequirements
+
 jupyter-server-proxy
 jupyter-wysiwyg
 
