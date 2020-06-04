@@ -31,13 +31,17 @@ The container can be launched directly using [`containds`](https://containds.com
 
 To run the container from the command line on a Mac:
 
-`docker run --name tm351test --rm -d -p 8895:8888 -v $PWD/notebooks:/home/jovyan/notebooks -v $PWD/openrefine_projects:/home/jovyan/openrefine -e JUPYTER_TOKEN="letmein" ousefuldemos/tm351-binderised:latest`
+`docker run --name tm351test --rm -d -p 8895:8888 -v "$PWD/notebooks:/home/jovyan/notebooks" -v "$PWD/openrefine_projects:/home/jovyan/openrefine" -e JUPYTER_TOKEN="letmein" ousefuldemos/tm351-binderised:latest`
 
+*(The quotes round the volume mount cope with spaces in the `$PWD` directory path)*
+  
 This will serve the container on `http://localhost:8895` and share folders from the current directory; login with the token `letmein` or whatever token you set.
 
 On Windows, I think you need to try something like the following [UNTESTED]:
 
 `docker run --name tm351test --rm -d -p 8895:8888 -v c:\tm129share\notebooks:c:\home\jovyan\notebooks -v c:\tm129share\openrefine_projects:c:\home\jovyan\openrefine -e JUPYTER_TOKEN="letmein" ousefuldemos/tm351-binderised:latest`
+
+*If you can help me debug the Windows invocation, that would be really useful. Please post to a new issue.*
 
 In order to access the notebook server via your browser, you will need to find the token used to access the notebook server. Use the one you set and passed in via the `JUPYTER_TOKEN=` assignment in the docker command, or look up the token by running:
 
