@@ -113,6 +113,9 @@ jupyter nbextension enable init_cell/main --sys-prefix
 #Accessibility
 jupyter nbextension install accessibility_toolbar --sys-prefix
 
+# Explicit installation may not be required?
+jupyter nbextension install --user --py jupyter_nbrequirements
+
 # AW: don't enable, but want to keep it installed
 # Can always let students know it's there.
 #jupyter nbextension enable accessibility_toolbar/main
