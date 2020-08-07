@@ -11,5 +11,5 @@ dependencies:
   - openjdk
   - pyproj
   #- jupyter-server-proxy
-  - pip:
-    - git+https://github.com/innovationOUtside/ou-tm351-py.git
+  #- pip:
+  #  - git+https://github.com/innovationOUtside/ou-tm351-py.git
