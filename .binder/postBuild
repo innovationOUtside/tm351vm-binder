@@ -95,6 +95,8 @@ git clone https://github.com/uclixnjupyternbaccessibility/accessibility_toolbar.
 #Install and enable extensions
 echo "Enable Jupyter extensions..."
 
+# TO DO - we should probably check that a package is installed before we try to install it?
+
 jupyter nbextension install accessibility_toolbar --sys-prefix
 
 jupyter contrib nbextension install --sys-prefix
@@ -118,7 +120,7 @@ jupyter nbextension enable init_cell/main --sys-prefix
 jupyter nbextension install accessibility_toolbar --sys-prefix
 
 # Explicit installation may not be required?
-jupyter nbextension install --user --py jupyter_nbrequirements
+#jupyter nbextension install --user --py jupyter_nbrequirements
 
 # AW: don't enable, but want to keep it installed
 # Can always let students know it's there.
