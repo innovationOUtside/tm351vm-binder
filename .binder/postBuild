@@ -79,11 +79,12 @@ mv .jupyter $CONDA_DIR/
 echo "Install Python requirements..."
 
 #Some Python package pre-requirements
-pip install --no-cache-dir numpy
-pip install --no-cache-dir scipy
+#pip install --no-cache-dir numpy
+#pip install --no-cache-dir scipy
 
 #Python requirements
-pip install --no-cache-dir -r binder/requirements.txt
+# ou-tm351-py package handled via a pip directive in environment.yml
+#pip install --no-cache-dir -r binder/requirements.txt
 
 #Other requirements
 
