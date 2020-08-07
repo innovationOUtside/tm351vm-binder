@@ -55,10 +55,12 @@ rm -r ./tmpdatafiles
 
 #Set up OpenRefine
 echo "Set up OpenRefine..."
-wget -q -O openrefine-2.8.tar.gz https://github.com/OpenRefine/OpenRefine/releases/download/2.8/openrefine-linux-2.8.tar.gz
+OPENREFINE_VERSION=3.3  #2.8
+#wget -q -O openrefine-${OPENREFINE_VERSION}.tar.gz https://github.com/OpenRefine/OpenRefine/releases/download/${OPENREFINE_VERSION}/openrefine-linux-${OPENREFINE_VERSION}.tar.gz
+wget -q -O openrefine-{OPENREFINE_VERSION}.tar.gz https://github.com/OpenRefine/OpenRefine/releases/download/${OPENREFINE_VERSION}/openrefine-linux-${OPENREFINE_VERSION}.tar.gz
 mkdir -p $CONDA_DIR/openrefine
-tar xzf openrefine-2.8.tar.gz -C $CONDA_DIR/openrefine
-rm openrefine-2.8.tar.gz
+tar xzf openrefine-${OPENREFINE_VERSION}.tar.gz -C $CONDA_DIR/openrefine
+rm openrefine-${OPENREFINE_VERSION}.tar.gz
 
 
 
@@ -83,8 +85,7 @@ echo "Install Python requirements..."
 #pip install --no-cache-dir scipy
 
 #Python requirements
-# ou-tm351-py package handled via a pip directive in environment.yml
-#pip install --no-cache-dir -r binder/requirements.txt
+pip install --no-cache-dir -r binder/requirements.txt
 
 #Other requirements
 
