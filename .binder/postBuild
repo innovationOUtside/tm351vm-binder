@@ -26,7 +26,7 @@ pg_ctl -D "$PGDATA" -l "$PGDATA/pg.log" stop
 #Set up mongodb
 echo "Set up mongo...."
 
-MONGODB_VERSION=3.6.15
+MONGODB_VERSION=4.2.8 #3.6.15
 MONGODB_PATH=${CONDA_DIR}/srv/mongodb-$MONGODB_VERSION
 MONGODB_BASE=mongodb-linux-x86_64
 
