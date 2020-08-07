@@ -26,7 +26,7 @@ pg_ctl -D "$PGDATA" -l "$PGDATA/pg.log" stop
 #Set up mongodb
 echo "Set up mongo...."
 
-MONGODB_VERSION=4.2.8 #3.6.15
+MONGODB_VERSION=$(<.mongo_version) #4.2.8 #3.6.15
 MONGODB_PATH=${CONDA_DIR}/srv/mongodb-$MONGODB_VERSION
 MONGODB_BASE=mongodb-linux-x86_64-ubuntu1804 #mongodb-linux-x86_64
 
@@ -55,7 +55,7 @@ rm -r ./tmpdatafiles
 
 #Set up OpenRefine
 echo "Set up OpenRefine..."
-OPENREFINE_VERSION=3.3  #2.8
+OPENREFINE_VERSION=$(<.openrefine_version)  #2.8
 #wget -q -O openrefine-${OPENREFINE_VERSION}.tar.gz https://github.com/OpenRefine/OpenRefine/releases/download/${OPENREFINE_VERSION}/openrefine-linux-${OPENREFINE_VERSION}.tar.gz
 wget -q -O openrefine-{OPENREFINE_VERSION}.tar.gz https://github.com/OpenRefine/OpenRefine/releases/download/${OPENREFINE_VERSION}/openrefine-linux-${OPENREFINE_VERSION}.tar.gz
 mkdir -p $CONDA_DIR/openrefine
