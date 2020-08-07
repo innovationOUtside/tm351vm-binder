@@ -29,13 +29,25 @@ The Jupyter notebook server runs on the default port 8888.
 
 The container can be launched directly using [`containds`](https://containds.com/), the desktop app for running notebook containers and a personal, local Binder service. Select a new image and search for `tm351`; the `ousefuldemos/tm351-binderised` image is the one you want. When prompted, select the "standard" launch route, NOT the 'Try to start Jupyter notebook' route.
 
+To get hold of the lastest version of the Docker container image, run the following command from the commandline/command prompt:
+
+`docker pull ousefuldemos/tm351-binderised:latest`
+
 To run the container from the command line on a Mac:
 
 `docker run --name tm351test --rm -d -p 8895:8888 -v "$PWD/notebooks:/home/jovyan/notebooks" -v "$PWD/openrefine_projects:/home/jovyan/openrefine" -e JUPYTER_TOKEN="letmein" ousefuldemos/tm351-binderised:latest`
 
 *(The quotes round the volume mount cope with spaces in the `$PWD` directory path)*
-  
+
 This will serve the container on `http://localhost:8895` and share folders from the current directory; login with the token `letmein` or whatever token you set.
+
+If you want to update a legacy container to use an updated image, you need to stop and remove/delete the original container and then rerun the `docker run` command:
+
+```
+docker stop tm351test
+docker rm tm351test
+```
+If you do delete the container, shared volume files will be preserved on host and mounted back into the new container, but any changes you made to the initial of the original container, such as installing additional Python packages or making changes to database tables, will be lost.
 
 On Windows, I think you need to try something like the following [UNTESTED]:
 
