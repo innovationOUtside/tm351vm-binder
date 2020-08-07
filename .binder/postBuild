@@ -3,6 +3,8 @@ set -eux
 
 echo "Running postBuild setup...."
 
+BINDER_DIR=.binder
+
 #Set up postgres
 echo "Set-up postgres..."
 
@@ -85,7 +87,7 @@ echo "Install Python requirements..."
 #pip install --no-cache-dir scipy
 
 #Python requirements
-pip install --no-cache-dir -r .binder/requirements.txt
+pip install --no-cache-dir -r ${BINDER_DIR}/requirements.txt
 
 #Other requirements
 
@@ -145,6 +147,6 @@ jupyter bundlerextension enable --py odszip.download --sys-prefix
 
 
 #Set executable permission on start file
-chmod +x binder/start
+chmod +x ${BINDER_DIR}/start
 
 echo "postBuild done..."
