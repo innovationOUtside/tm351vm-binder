@@ -10,6 +10,7 @@ dependencies:
   - graphviz
   - openjdk
   - pyproj
+  - lsof
   #- jupyter-server-proxy
   #- pip:
   #  - git+https://github.com/innovationOUtside/ou-tm351-py.git
