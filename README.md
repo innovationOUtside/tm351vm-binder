@@ -27,8 +27,6 @@ The container can be found as `ousefuldemos/tm351-binderised:latest`.
 
 The Jupyter notebook server runs on the default port 8888.
 
-The container can be launched directly using [`containds`](https://containds.com/), the desktop app for running notebook containers and a personal, local Binder service. Select a new image and search for `tm351`; the `ousefuldemos/tm351-binderised` image is the one you want. When prompted, select the "standard" launch route, NOT the 'Try to start Jupyter notebook' route.
-
 To get hold of the lastest version of the Docker container image, run the following command from the commandline/command prompt:
 
 `docker pull ousefuldemos/tm351-binderised:latest`
@@ -69,3 +67,5 @@ Use the token value to log in to the server.
 The run command will create a notebooks directory in the directory you issued the run command from, and then share it into the `notebooks` folder that you can see from the notebook server homepage. OpenRefine projects are also shared between your local machine and the container.
 
 Files that exist outside the `/home/joyan/notebooks` and `/home/jovyan/openrefine` directory paths in the container (which is to say, outside the `notebooks` and `openrefine` directories viewable from the notebook server homepage, *will not be shared to your local desktop*.
+
+The container can also be launched directly using [`containds`](https://containds.com/), the desktop app for running notebook containers and a personal, local Binder service. Select a new image and search for `tm351`; the `ousefuldemos/tm351-binderised` image is the one you want. When prompted, select the "standard" launch route, NOT the 'Try to start Jupyter notebook' route.
