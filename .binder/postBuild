@@ -149,4 +149,11 @@ jupyter bundlerextension enable --py odszip.download --sys-prefix
 #Set executable permission on start file
 chmod +x ${BINDER_DIR}/start
 
+# Log version / build date
+OU_PRESENTATION=$(<.ou_presentation)
+
+DATE=`date +%Y-%m-%d/%H:%M.%S`
+echo "Version: ${OU_PRESENTATION} - build time: ${DATE}." >${CONDA_DIR}/version.txt
+
+
 echo "postBuild done..."
