@@ -9,6 +9,7 @@ psql postgres -c "CREATE USER testuser PASSWORD 'testpass'"
 # Add users for compatibility with pre-20J notebooks
 psql postgres -c "CREATE USER tm351 PASSWORD 'tm351'"
 psql postgres -c "CREATE USER tm351_student PASSWORD 'tm351_pwd'"
+psql postgres -c "CREATE USER tm351admin WITH PASSWORD 'tm351admin' SUPERUSER";
 
 #The -O flag below sets the user: createdb -O DBUSER DBNAME
 createdb -O testuser testdb
