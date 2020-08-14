@@ -38,7 +38,7 @@ To run the container from the command line on a Mac:
 mkdir -p TM351VCE
 
 # Launch the container with shared directories mounted from your TM351VCE directory
-docker run --name tm351_20J --rm -d -p 8351:8888 -v "$PWD/TM351VCE/notebooks:/home/jovyan/notebooks" -v "$PWD/TM351VCE/openrefine_projects:/home/jovyan/openrefine" -e JUPYTER_TOKEN="letmein" ousefuldemos/tm351-binderised:latest
+docker run --name tm351vce --rm -d -p 8351:8888 -v "$PWD/TM351VCE/notebooks:/home/jovyan/notebooks" -v "$PWD/TM351VCE/openrefine_projects:/home/jovyan/openrefine" -e JUPYTER_TOKEN="letmein" ousefuldemos/tm351-binderised:latest
 ```
 
 *(The quotes round the volume mount cope with spaces in the `$PWD` directory path)*
@@ -50,8 +50,8 @@ This will serve the container on `http://localhost:8351` and share folders from 
 If you want to update a legacy container to use an updated image, you need to stop and remove/delete the original container and then rerun the `docker run` command:
 
 ```
-docker stop tm351_20J
-docker rm tm351_20J
+docker stop tm351vce
+docker rm tm351vce
 ```
 If you do delete the container, shared volume files will be preserved on host and mounted back into the new container, but any changes you made to the initial of the original container, such as installing additional Python packages or making changes to database tables, will be lost.
 
