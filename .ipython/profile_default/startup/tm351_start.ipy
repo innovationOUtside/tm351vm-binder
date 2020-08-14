@@ -1,0 +1,34 @@
+#Files to load in to every IPython notebook
+
+# THESE WERE LOADED INTO ORIGINAL TM351VM
+# AS OF 2020, REQUIRE STUDENTS TO LOAD PACKAGES
+# BUT RETAIN MAGIC IMPORTS, CONFIG SETTINGS, ETC
+
+#import matplotlib.pyplot as plt
+#import numpy as np
+
+%matplotlib inline
+
+#Issue https://github.com/undercertainty/tm351/issues/88
+%config SqlMagic.displaylimit=50
+%config SqlMagic.autopandas=True
+
+#Issue https://github.com/undercertainty/tm351/issues/99
+%load_ext sql
+
+
+from pandas import set_option
+#Floating point number precision
+set_option('precision',7)
+
+set_option('display.max_rows', 50 )
+set_option('display.max_columns', 25)
+
+
+#Issue https://github.com/undercertainty/tm351/issues/89
+import psycopg2 as pg
+DEC2FLOAT = pg.extensions.new_type(
+    pg.extensions.DECIMAL.values,
+    'DEC2FLOAT',
+    lambda value, curs: float(value) if value is not None else None)
+pg.extensions.register_type(DEC2FLOAT)
