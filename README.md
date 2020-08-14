@@ -64,7 +64,7 @@ You can also specify volume bindings using an absilute path to a directory on th
 
 In order to access the notebook server via your browser, you will need to find the token used to access the notebook server. Use the one you set and passed in via the `JUPYTER_TOKEN=` assignment in the docker command, or look up the token by running:
 
-`docker exec -it tm351_20J jupyter notebook list`
+`docker exec -it tm351vce jupyter notebook list`
 
 This will display something along the lines of:
 
