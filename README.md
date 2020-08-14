@@ -43,6 +43,8 @@ docker run --name tm351_20J --rm -d -p 8351:8888 -v "$PWD/TM351VCE/notebooks:/ho
 
 *(The quotes round the volume mount cope with spaces in the `$PWD` directory path)*
 
+Rather than using the mounting directories relative to the current directory (`$PWD`) the `docker run` command is run in, we could also specify a mounted directory using an absolute path, such as `"/Users/MyUser/TM351VCE/notebooks:/home/jovyan/notebooks"`.
+
 This will serve the container on `http://localhost:8351` and share folders from the `TM351VCE` folder in the current directory; login with the token `letmein` or whatever token you set.
 
 If you want to update a legacy container to use an updated image, you need to stop and remove/delete the original container and then rerun the `docker run` command:
@@ -53,11 +55,12 @@ docker rm tm351_20J
 ```
 If you do delete the container, shared volume files will be preserved on host and mounted back into the new container, but any changes you made to the initial of the original container, such as installing additional Python packages or making changes to database tables, will be lost.
 
-On Windows, first create a directory `C:\TM351VCE`. I think you then need to try something like the following [UNTESTED]:
+On Windows, first create a directory `C:\TM351VCE`. Then start the container using a command of the form:
 
-`docker run --name tm351_20J --rm -d -p 8351:8888 -v c:\TM351VCE\notebooks:c:\home\jovyan\notebooks -v c:\TM351VCE\openrefine_projects:c:\home\jovyan\openrefine -e JUPYTER_TOKEN="letmein" ousefuldemos/tm351-binderised:latest`
-
-*If you can help me debug the Windows invocation, that would be really useful. Please post to a new issue.*
+`docker run --name tm351vce --rm -d -p 8351:8888 -v $pwd\notebooks:/home/jovyan/notebooks
+ -v $pwd\openrefine_projects:/home/jovyan/openrefine -e JUPYTER_TOKEN="letmein" ousefuldemos/tm351-binderised:latest`
+ 
+You can also specify volume bindings using an absilute path to a directory on the host computer, rather than a path relative to the current directory (`$pwd`) that the `docker run` command is executed in, using a volume mount command of the form `-v c:\TM351VCE\notebooks:c:\home\jovyan\notebooks`.
 
 In order to access the notebook server via your browser, you will need to find the token used to access the notebook server. Use the one you set and passed in via the `JUPYTER_TOKEN=` assignment in the docker command, or look up the token by running:
 
