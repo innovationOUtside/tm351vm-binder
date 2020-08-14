@@ -35,7 +35,10 @@ To run the container from the command line on a Mac:
 
 ```
 # Create a directory for your TM351 work
-mkdir -p TM351VCE
+mkdir -p /Users/MyUser/TM351VCE
+
+# Change directory to your TM351VCE directory
+cd /Users/MyUser/TM351VCE
 
 # Launch the container with shared directories mounted from your TM351VCE directory
 docker run --name tm351vce --rm -d -p 8351:8888 -v "$PWD/TM351VCE/notebooks:/home/jovyan/notebooks" -v "$PWD/TM351VCE/openrefine_projects:/home/jovyan/openrefine" -e JUPYTER_TOKEN="letmein" ousefuldemos/tm351-binderised:latest
@@ -55,12 +58,12 @@ docker rm tm351vce
 ```
 If you do delete the container, shared volume files will be preserved on host and mounted back into the new container, but any changes you made to the initial of the original container, such as installing additional Python packages or making changes to database tables, will be lost.
 
-On Windows, first create a directory `C:\TM351VCE`. Then start the container using a command of the form:
+On Windows, first create a directory `C:\Users\MyUser\TM351VCE`. In the command prompt, change directory to your `C:\Users\MyUser\TM351VCE` directory and start the container using a command of the form:
 
 `docker run --name tm351vce --rm -d -p 8351:8888 -v $pwd\notebooks:/home/jovyan/notebooks
  -v $pwd\openrefine_projects:/home/jovyan/openrefine -e JUPYTER_TOKEN="letmein" ousefuldemos/tm351-binderised:latest`
  
-You can also specify volume bindings using an absilute path to a directory on the host computer, rather than a path relative to the current directory (`$pwd`) that the `docker run` command is executed in, using a volume mount command of the form `-v c:\TM351VCE\notebooks:c:\home\jovyan\notebooks`.
+You can also specify volume bindings using an absilute path to a directory on the host computer, rather than a path relative to the current directory (`$pwd`) that the `docker run` command is executed in, using a volume mount command of the form `-v c:\Users\MyUser\TM351VCE\notebooks:c:\home\jovyan\notebooks`.
 
 In order to access the notebook server via your browser, you will need to find the token used to access the notebook server. Use the one you set and passed in via the `JUPYTER_TOKEN=` assignment in the docker command, or look up the token by running:
 
