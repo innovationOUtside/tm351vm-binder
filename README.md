@@ -23,7 +23,13 @@ This repository can be used to launch the environment via a Binderhub service su
 
 A Github Action is also used to build Docker images using `repo2docker` and then push the resulting container image to Docker Hub.
 
-The container image can be found as `ousefuldemos/tm351-binderised:latest`.
+The container image can be found as `ousefuldemos/tm351-binderised:latest`. The actual releases to studentes will be differently named:
+
+```
+docker pull ousefuldemos/tm351-binderised:latest && docker image tag ousefuldemos/tm351-binderised:latest ousefulcoursecontainers/ou-tm351:current && docker push ousefulcoursecontainers/ou-tm351:current
+```
+
+Tbat is, as `ousefulcoursecontainers/ou-tm351:current` (we may also explore a per-presentation tagging strategy).
 
 WHen the environment is launched via a container, the Jupyter notebook server tat provides the main user interface runs on the default port 8888.
 
@@ -60,8 +66,7 @@ If you do delete the container, shared volume files will be preserved on host an
 
 On Windows, first create a directory `C:\Users\MyUser\TM351VCE`. In the command prompt, change directory to your `C:\Users\MyUser\TM351VCE` directory and start the container using a command of the form:
 
-`docker run --name tm351vce --rm -d -p 8351:8888 -v $pwd\notebooks:/home/jovyan/notebooks
- -v $pwd\openrefine_projects:/home/jovyan/openrefine -e JUPYTER_TOKEN="letmein" ousefuldemos/tm351-binderised:latest`
+`docker run --name tm351vce -d -p 35180:8888 -v $pwd\notebooks:/home/jovyan/notebooks -v $pwd\openrefine_projects:/home/jovyan/openrefine -e JUPYTER_TOKEN="letmein" ousefuldemos/tm351-binderised:latest`
  
 You can also specify volume bindings using an absilute path to a directory on the host computer, rather than a path relative to the current directory (`$pwd`) that the `docker run` command is executed in, using a volume mount command of the form `-v c:\Users\MyUser\TM351VCE\notebooks:c:\home\jovyan\notebooks`.
 
