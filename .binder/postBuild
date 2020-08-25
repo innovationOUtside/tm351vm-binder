@@ -99,8 +99,6 @@ echo "Enable Jupyter extensions..."
 
 # TO DO - we should probably check that a package is installed before we try to install it?
 
-jupyter nbextension install accessibility_toolbar --sys-prefix
-
 jupyter contrib nbextension install --sys-prefix
 
 #Enable certain extensions from the start
