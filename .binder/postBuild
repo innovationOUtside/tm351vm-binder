@@ -114,7 +114,7 @@ jupyter nbextension enable export_embedded/main --sys-prefix
 
 jupyter nbextension enable skip-traceback/main --sys-prefix
 jupyter nbextension enable hide_input/main --sys-prefix
-jupyter nbextension enable init_cell/main --sys-prefix
+#jupyter nbextension enable init_cell/main --sys-prefix
 
 #Accessibility
 jupyter nbextension install accessibility_toolbar --sys-prefix
