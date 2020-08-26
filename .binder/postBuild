@@ -113,11 +113,15 @@ jupyter nbextension enable python-markdown/main --sys-prefix
 jupyter nbextension enable export_embedded/main --sys-prefix
 
 jupyter nbextension enable skip-traceback/main --sys-prefix
-jupyter nbextension enable hide_input/main --sys-prefix
+#jupyter nbextension enable hide_input/main --sys-prefix
 #jupyter nbextension enable init_cell/main --sys-prefix
 
 #Accessibility
 jupyter nbextension install accessibility_toolbar --sys-prefix
+
+
+# nbdime - disable toolbar extension by default
+jupyter nbextension disable --py nbdime
 
 # Explicit installation may not be required?
 #jupyter nbextension install --user --py jupyter_nbrequirements
