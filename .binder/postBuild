@@ -52,8 +52,8 @@ tar xvjf ./data/small_accidents.tar.bz2 -C ./tmpdatafiles
 ${MONGODB_PATH}/bin/mongorestore --drop --db accidents ./tmpdatafiles/small_accidents
 ${MONGODB_PATH}/bin/mongod --shutdown --dbpath ${MONGODB_PATH}/data/db
 
-rm -r ./data
-rm -r ./tmpdatafiles
+rm -rf ./data
+rm -rf ./tmpdatafiles
 
 #Set up OpenRefine
 echo "Set up OpenRefine..."
@@ -118,7 +118,7 @@ jupyter nbextension enable skip-traceback/main --sys-prefix
 
 #Accessibility
 jupyter nbextension install accessibility_toolbar --sys-prefix
-
+rm -rf ./accessibility_toolbar
 
 # nbdime - disable toolbar extension by default
 jupyter nbextension disable --py nbdime
