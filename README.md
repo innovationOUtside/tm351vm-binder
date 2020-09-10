@@ -25,18 +25,24 @@ A Github Action is also used to build Docker images using `repo2docker` and then
 
 The container image as built from this repository can be found as `ousefuldemos/tm351-binderised:latest` and should be regarded as *unofficial* and *bleeding edge*!
 
-The following command is used in the build process to build, tag and releaase containers:
+The following command is used in the build process to build, tag and release containers:
 ```
 docker pull ousefuldemos/tm351-binderised:latest && docker image tag ousefuldemos/tm351-binderised:latest ousefulcoursecontainers/ou-tm351:current && docker push ousefulcoursecontainers/ou-tm351:current
 ```
 
-The actual Docker image released to students and ALs for 2020J  will be differently named, most likely as `ousefulcoursecontainers/ou-tm351:current` (we may also explore a per-presentation tagging strategy).
+The actual Docker image released to students and ALs for 2020J  will be named most likely as `ousefulcoursecontainers/ou-tm351:current` (we may also explore a per-presentation tagging strategy).
 
-WHen the environment is launched via a container, the Jupyter notebook server tat provides the main user interface runs on the default port 8888.
+When the environment is launched via a container, the Jupyter notebook server that provides the main user interface runs inside the container on the default port 8888.
 
-To get hold of the lastest version of the Docker container image, run the following command from the commandline/command prompt:
+## Installation
+
+To run the TM351 virtual computing environment on your own computer, you will first need to [download and install Docker](https://docs.docker.com/get-docker/).
+
+To get hold of the latest version of the Docker container image as built from releases from this repository, run the following command from the commandline/command prompt:
 
 `docker pull ousefuldemos/tm351-binderised:latest`
+
+The anticipated image for TM351 2020J can be obtained by running the command: `docker pull ousefulcoursecontainers/ou-tm351:current`
 
 To run the container from the command line on a Mac:
 
