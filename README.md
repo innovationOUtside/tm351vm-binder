@@ -23,13 +23,14 @@ This repository can be used to launch the environment via a Binderhub service su
 
 A Github Action is also used to build Docker images using `repo2docker` and then push the resulting container image to Docker Hub.
 
-The container image can be found as `ousefuldemos/tm351-binderised:latest`. The actual releases to studentes will be differently named:
+The container image as built from this repository can be found as `ousefuldemos/tm351-binderised:latest` and should be regarded as *unofficial* and *bleeding edge*!
 
+The following command is used in the build process to build, tag and releaase containers:
 ```
 docker pull ousefuldemos/tm351-binderised:latest && docker image tag ousefuldemos/tm351-binderised:latest ousefulcoursecontainers/ou-tm351:current && docker push ousefulcoursecontainers/ou-tm351:current
 ```
 
-Tbat is, as `ousefulcoursecontainers/ou-tm351:current` (we may also explore a per-presentation tagging strategy).
+The actual Docker image released to students and ALs for 2020J  will be differently named, most likely as `ousefulcoursecontainers/ou-tm351:current` (we may also explore a per-presentation tagging strategy).
 
 WHen the environment is launched via a container, the Jupyter notebook server tat provides the main user interface runs on the default port 8888.
 
