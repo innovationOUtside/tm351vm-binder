@@ -1,4 +1,14 @@
 # tm351vm-binder
+
+Repo for defining and building the TM351 Virtual Computing Enviornment (VCE) Docker image.
+
+This README is *not intended* to play the role of a software installation guide; the official software installation guide will be distributed as part of the course materials via the OU VLE.
+
+However, some guidance on installing and using the TM351 VCE locally and on remote hosts, as well as acessing TM351 VCE services from a VS Code editor is available from the [wiki](https://github.com/innovationOUtside/tm351vm-binder/wiki).
+
+----
+
+
 See if we can generate a Binder/repo2docker build of the TM351 VM
 
 Open to Notebook homepage: [![Binder](https://gke.mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/innovationOUtside/tm351vm-binder/master)
