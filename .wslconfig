@@ -1,0 +1,12 @@
+[wsl2]
+
+# __Running Docker under WSL may cause your hold computer to slow down__  [contributed]:
+#  a fix described in [How to Stop WSL2 from Hogging All Your Ram With Docker](https://medium.com/@lewwybogus/how-to-stop-wsl2-from-hogging-all-your-ram-with-docker-d7846b9c5b37) suggests:
+#
+# 1. creating a `.wslconfig` file in `c:\users\YOUR_PROFILE_NAME`
+# 2.  from Powershell with admin rights, restart WSL2 by typing: `Restart-Service LxssManager`
+# You should be okay setting `memory=4GB` although you may find things, particularly in the second half of the course, run more smoothly by setting `memory=4GB`
+
+memory=4GB # Limits VM memory in WSL 2 to 4 GB
+processors=2 # Makes the WSL 2 VM use two virtual processors
+
