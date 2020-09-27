@@ -1,0 +1,18 @@
+version: "3.5"
+
+services:
+  tm351:
+    image: ousefulcoursecontainers/ou-tm351:current
+    environment:
+      JUPYTER_TOKEN: "letmein"
+    volumes:
+      - "./TM351VCE/notebooks:/home/jovyan/notebooks"
+      - "./TM351VCE/openrefine_projects:/home/jovyan/openrefine"
+    networks:
+      - tm351
+    ports:
+      - 35180:8888
+      - 35181:5432
+      - 35182:27017
+networks:
+  tm351:
