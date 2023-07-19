@@ -1,1 +1,2 @@
-git+https://github.com/innovationOUtside/ou-tm351-py.git
+#git+https://github.com/innovationOUtside/ou-tm351-py.git
+ou-tm351-py
